@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abf-xx-79a">
-                                <rect key="frame" x="66" y="170" width="100" height="100"/>
+                                <rect key="frame" x="66" y="120" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="UGL-4a-ShU"/>
@@ -44,7 +44,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPh-ch-jdQ">
-                                <rect key="frame" x="201" y="170" width="100" height="100"/>
+                                <rect key="frame" x="201" y="120" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LAF-jm-UrB"/>
@@ -63,9 +63,12 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="canvasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3G-FJ-Vi1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Hv-X2-OzB">
-                                <rect key="frame" x="66" y="305" width="100" height="100"/>
+                                <rect key="frame" x="66" y="255" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="TA4-eJ-7l5"/>
@@ -84,9 +87,12 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="myUTPBTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCq-WH-FXE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0y-d9-L2b">
-                                <rect key="frame" x="201" y="305" width="100" height="100"/>
+                                <rect key="frame" x="201" y="255" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="5qr-4l-oRj"/>
@@ -107,7 +113,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gib-Et-UqJ">
-                                <rect key="frame" x="66" y="440" width="100" height="100"/>
+                                <rect key="frame" x="66" y="390" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="APc-OR-0si"/>
@@ -128,7 +134,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8K-lN-zZf">
-                                <rect key="frame" x="201" y="440" width="100" height="100"/>
+                                <rect key="frame" x="201" y="390" width="100" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="eIc-46-irk"/>
@@ -148,6 +154,12 @@
                                     </attributedString>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw9-kH-tiJ">
+                                <rect key="frame" x="166" y="49" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -156,18 +168,21 @@
                             <constraint firstItem="U8K-lN-zZf" firstAttribute="leading" secondItem="Gib-Et-UqJ" secondAttribute="trailing" constant="35" id="6SX-9m-org"/>
                             <constraint firstItem="U8K-lN-zZf" firstAttribute="top" secondItem="x0y-d9-L2b" secondAttribute="bottom" constant="35" id="BjD-ep-udd"/>
                             <constraint firstItem="7Hv-X2-OzB" firstAttribute="top" secondItem="abf-xx-79a" secondAttribute="bottom" constant="35" id="DHs-gL-cpe"/>
+                            <constraint firstItem="dw9-kH-tiJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K4i-IG-CAj"/>
                             <constraint firstItem="Gib-Et-UqJ" firstAttribute="top" secondItem="7Hv-X2-OzB" secondAttribute="bottom" constant="35" id="PUn-9v-udy"/>
-                            <constraint firstItem="abf-xx-79a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="Y7l-gK-xhi"/>
+                            <constraint firstItem="abf-xx-79a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Y7l-gK-xhi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uPh-ch-jdQ" secondAttribute="trailing" constant="50" id="kDu-LY-PZm"/>
                             <constraint firstItem="x0y-d9-L2b" firstAttribute="leading" secondItem="7Hv-X2-OzB" secondAttribute="trailing" constant="35" id="nI6-Cm-CWJ"/>
-                            <constraint firstItem="uPh-ch-jdQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="qGT-tv-DRp"/>
+                            <constraint firstItem="uPh-ch-jdQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="qGT-tv-DRp"/>
                             <constraint firstItem="7Hv-X2-OzB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="rk8-JA-p2l"/>
                             <constraint firstItem="uPh-ch-jdQ" firstAttribute="leading" secondItem="abf-xx-79a" secondAttribute="trailing" constant="35" id="sF4-A0-UTy"/>
                             <constraint firstItem="abf-xx-79a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="vx6-eP-oUz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="canvasButton" destination="uPh-ch-jdQ" id="1rM-hO-rIc"/>
                         <outlet property="locationButton" destination="abf-xx-79a" id="AXj-3Y-xG6"/>
+                        <outlet property="myUTPBButton" destination="7Hv-X2-OzB" id="eXb-jb-2M6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
